@@ -27,9 +27,7 @@ class RobustTransform extends Transform implements Plugin<Project> {
     private static List<String> exceptMethodList = new ArrayList<>();
     private static boolean isHotfixMethodLevel = false;
     private static boolean isExceptMethodLevel = false;
-//    private static boolean isForceInsert = true;
     private static boolean isForceInsert = false;
-//    private static boolean useASM = false;
     private static boolean useASM = true;
     private static boolean isForceInsertLambda = false;
 
@@ -59,7 +57,6 @@ class RobustTransform extends Transform implements Plugin<Project> {
             }
             if (!isDebugTask) {
                 project.android.registerTransform(this)
-//                project.afterEvaluate(new RobustApkHashAction())
                 logger.quiet "Register robust transform successful !!!"
             }
             if (null != robust.switch.turnOnRobust && !"true".equals(String.valueOf(robust.switch.turnOnRobust))) {
@@ -67,7 +64,6 @@ class RobustTransform extends Transform implements Plugin<Project> {
             }
         } else {
             project.android.registerTransform(this)
-//            project.afterEvaluate(new RobustApkHashAction())
         }
     }
 

@@ -56,10 +56,9 @@ bintray {
     pkg {
         repo = 'maven'
         name = "${project.group}:${project.name}"
-        userOrg = 'meituan'
         licenses = ['Apache-2.0']
-        websiteUrl = 'http://tech.meituan.com/android_autopatch.html'
-        vcsUrl = 'https://github.com/Meituan-Dianping/Robust'
+        websiteUrl = 'https://github.com/wutongke/Robust'
+        vcsUrl = 'https://github.com/wutongke/Robust'
         publish = true
     }
 }
