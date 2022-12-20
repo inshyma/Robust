@@ -74,7 +74,7 @@ class ConvertUtils {
     }
 
     public static boolean shouldBlockConvert(String className) {
-        return "META-INF.versions.9.module-info".equals(className);
+        return "META-INF.versions.9.module-info".equals(className) || "module-info".equals(className);
     }
 
 }
